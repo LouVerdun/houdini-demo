@@ -1,0 +1,93 @@
+.bg{
+    background: url(https://shotgunwildatheart.files.wordpress.com/2013/08/post-apoc.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.bg::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, .5);
+    z-index: 1;
+}
+
+.eye-one,
+.eye-two{
+    --step-one: transparent;
+    --step-two: black;
+    --step-three: black;
+
+    --percent-one: 40%;
+    --percent-two: 50%;
+    --percent-three: 60%;
+
+    --percent-linear-one: 50%;  
+    --percent-linear-two: 50%;
+    
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 35%;
+    width: 50%;
+    background: 
+        radial-gradient(ellipse at center, var(--step-one) var(--percent-one), var(--step-two) var(--percent-two), var(--step-three) var(--percent-three)), 
+        linear-gradient(to bottom, var(--step-two), var(--step-two) var(--percent-linear-one), transparent 50%, var(--step-two) var(--percent-linear-two), var(--step-two) 100%);
+    animation: blink 2s 1s alternate forwards;
+    transform: translateY(-50%);
+}
+
+body::before{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 33%;
+    background-color: black;
+}
+
+body::after{
+    content: '';
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 33%;
+    background-color: black;
+}
+
+.eye-two{
+    left: 50%;
+}
+
+@keyframes blink{
+    0%{
+        --percent-linear-one: 49%;
+        --percent-linear-two: 51%;
+    }
+    40%{
+        --percent-linear-one: 40%;
+        --percent-linear-two: 60%;
+    }
+    45%{
+        --percent-linear-one: 49%;
+        --percent-linear-two: 51%;
+    }
+    50%{
+        --percent-linear-one: 45%;
+        --percent-linear-two: 65%;
+    }
+    55%{
+        --percent-linear-one: 49%;
+        --percent-linear-two: 51%;
+    }
+    100%{
+        --percent-linear-one: 5%;
+        --percent-linear-two: 95%;
+    }
+}

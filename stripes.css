@@ -1,0 +1,36 @@
+/* =========================================================================  */
+/* Stripes */
+/* =========================================================================  */
+
+.stripes{
+    --stepOne: 0%;
+    --stepTwo: 20%;
+    --stepThree: 40%;
+
+    --firstColor: #e32118;
+    --secondColor: white;
+
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        -50deg,
+        var(--firstColor) var(--stepOne),
+        var(--firstColor) var(--stepTwo),
+        var(--secondColor) var(--stepTwo),
+        var(--secondColor) var(--stepThree)
+    );
+    animation: move 5s infinite linear;
+}
+
+@keyframes move{
+    0%{
+        --stepOne: 0%;
+        --stepTwo: 20%;
+        --stepThree: 40%;
+    }
+    100%{
+        --stepOne: 80%;
+        --stepTwo: 100%;
+        --stepThree: 120%;
+    }
+}

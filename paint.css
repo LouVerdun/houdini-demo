@@ -1,0 +1,17 @@
+/* =========================================================================  */
+/* Paint API */
+/* =========================================================================  */
+
+.paint{
+    --color: #e32118;
+
+    height: 100%;
+    width: 100%;
+
+    background: paint(circle) no-repeat center center;
+    transition: --color .3s ease-in-out;
+}
+
+.paint:hover{
+    --color: blue;
+}
