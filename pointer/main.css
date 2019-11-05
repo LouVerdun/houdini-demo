@@ -1,0 +1,19 @@
+.element{
+    --radius: 20;
+    --thickness: 2px;
+    --mouse-x: 0px;
+    --mouse-y: 0px;
+    --animation-tick: 0;
+
+    --color: #d81d28;
+    --bg: #084085;
+
+    height: 100%;
+    width: 100%;
+
+    background: var(--bg);
+}
+
+.element.is-animating{
+    background: paint(pointer) var(--bg);
+}

@@ -1,0 +1,15 @@
+.element{
+    --mouse-x: 0px;
+    --mouse-y: 0px;
+    --end-stop: 80%;
+
+    height: 100%;
+    width: 100%;
+
+    transition: --end-stop .5s;
+    background: radial-gradient(ellipse farthest-corner at var(--mouse-x) var(--mouse-y), #f8f8e1 0%, #fd7579 var(--end-stop));
+}
+
+.element.is-small{
+    --end-stop: 40%;
+}

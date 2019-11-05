@@ -2,8 +2,8 @@
 /* Paint API */
 /* =========================================================================  */
 
-.paint{
-    --color: #e32118;
+.element{
+    --color: hsl(0deg,50%,50%);
 
     height: 100%;
     width: 100%;
@@ -12,6 +12,6 @@
     transition: --color .3s ease-in-out;
 }
 
-.paint:hover{
-    --color: blue;
+.element:hover{
+    --color: hsl(180deg, 50%, 50%);
 }

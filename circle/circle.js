@@ -1,6 +1,6 @@
 class Circle {
     static get inputProperties() { 
-        return ['--color', '--mouse-x', '--mouse-y'];
+        return ['--color'];
     }
 
     paint(ctx, geometry, properties) {
@@ -16,20 +16,6 @@ class Circle {
         );
 
         ctx.fill();
-
-        // Line
-        // ctx.beginPath();
-        // ctx.moveTo(0,0);
-        // ctx.lineTo(50, 50);
-        // ctx.stroke();
-
-        // Outline circle
-        // ctx.strokeStyle = 'black';
-        // ctx.lineWidth = 2;
-        // ctx.beginPath();
-        // ctx.arc( 50, 50, 20, 0, 2*Math.PI);
-        // ctx.stroke();
-        // ctx.closePath();
     }
 }
 
