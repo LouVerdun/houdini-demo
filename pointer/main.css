@@ -1,12 +1,12 @@
 .element{
     --radius: 20;
     --thickness: 2px;
-    --mouse-x: 0px;
-    --mouse-y: 0px;
+    --mouse-x: 100px;
+    --mouse-y: 100px;
     --animation-tick: 0;
 
-    --color: #d81d28;
-    --bg: #084085;
+    --color: #14146b;
+    --bg: #ecb6aa;
 
     height: 100%;
     width: 100%;

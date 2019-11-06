@@ -3,7 +3,7 @@ const init = async () => {
         await CSS.paintWorklet.addModule('pointer.js');
     }
 
-    const duration = 500;
+    const duration = 400;
     const el = document.querySelector('.element');
     const parentBb = el.closest('.wrapper').getBoundingClientRect();
 
@@ -19,7 +19,7 @@ const init = async () => {
             el.style.setProperty('--mouse-x', x);
             el.style.setProperty('--mouse-y', y);
             el.style.setProperty('--tick', count);
-            el.style.setProperty('--radius', (count / duration * 25));
+            el.style.setProperty('--radius', (count / duration * 30));
 
             if (count > duration) {
                 el.classList.remove('is-animating');

@@ -8,10 +8,15 @@
     height: 100%;
     width: 100%;
 
-    background: paint(circle) no-repeat center center;
+    background: paint(circle);
     transition: --color .3s ease-in-out;
 }
 
 .element:hover{
     --color: hsl(180deg, 50%, 50%);
+}
+
+.element{
+    /* Force la propriété font-size à rester entre 10px et 100px */
+    font-size: clamp(10px, 1vw, 100px);
 }

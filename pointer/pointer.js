@@ -23,7 +23,7 @@ class Pointer {
         // Line
         ctx.strokeStyle = color;
         ctx.lineWidth = thickness;
-        ctx.globalAlpha = 1 - tick / 600;
+        ctx.globalAlpha = 1 - tick / 400;
 
         ctx.beginPath();
         ctx.moveTo(fromX + 2, fromY + 2);
@@ -48,11 +48,10 @@ class Pointer {
         ctx.lineTo(fromX + radius, fromY - radius);
         ctx.stroke();
 
-        ctx.beginPath();
-        ctx.moveTo(fromX + 2, fromY + 2);
-        ctx.lineTo(fromX + radius, fromY + radius);
-        ctx.stroke();
-        ctx.closePath();
+        // ctx.beginPath();
+        // ctx.moveTo(fromX + 2, fromY - 2);
+        // ctx.lineTo(fromX + radius, fromY - radius);
+        // ctx.stroke();
     }
 }
 
