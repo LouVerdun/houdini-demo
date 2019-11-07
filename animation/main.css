@@ -1,0 +1,31 @@
+.element-wrapper{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    pointer-events: none;
+    padding: 50px;
+}
+
+.element{
+    --color: #14146b;
+    --bg: #ecb6aa;
+
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+
+    background: var(--bg);
+}
+
+.scroller{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: auto;
+}
+
+.inner{
+    height: 300vh;
+}
