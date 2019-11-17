@@ -36,12 +36,15 @@ const init = async () => {
                     iterations: Number.POSITIVE_INFINITY
                 }
             ),
-            document.timeline
-            // new ScrollTimeline({
-            //     scrollSource: document.querySelector('.scroller'),
-            //     orientation: "vertical", // "horizontal" or "vertical".
-            //     timeRange: 4000
-            // })
+            // Time based animation
+            // document.timeline
+
+            // Scroll based animation
+            new ScrollTimeline({
+                scrollSource: document.querySelector('.scroller'),
+                orientation: "vertical", // "horizontal" or "vertical".
+                timeRange: 4000
+            })
         )
         .play();
     }
